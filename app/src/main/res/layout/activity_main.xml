@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Conversion:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#7A7676"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/fbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="rotateFair"
+            android:text="Fahrenheit to Celsius" />
+
+        <RadioButton
+            android:id="@+id/celciusbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="rotate"
+            android:text="Celsius to Fahrenheit" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="52dp"
+        android:text="Fahrenheit Degrees:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <EditText
+        android:id="@+id/Input"
+        android:layout_width="118dp"
+        android:layout_height="46dp"
+        android:background="#52787C7C"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberDecimal|numberSigned"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewF"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup2" />
+    <TextView
+        android:id="@+id/textViewC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Celsius Degrees:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewF"
+        app:layout_constraintTop_toBottomOf="@+id/ConvertButton" />
+
+    <TextView
+        android:id="@+id/Output"
+        android:layout_width="127dp"
+        android:layout_height="46dp"
+        android:background="#52787C7C"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewC"
+        app:layout_constraintEnd_toEndOf="@+id/Input"
+        app:layout_constraintStart_toStartOf="@+id/Input" />
+
+    <Button
+        android:id="@+id/ConvertButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="Convert"
+        android:text="Convert"
+        app:layout_constraintEnd_toEndOf="@+id/Input"
+        app:layout_constraintStart_toStartOf="@+id/textViewF"
+        app:layout_constraintTop_toBottomOf="@+id/textViewF" />
+
+    <TextView
+        android:id="@+id/ConversionHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Conversion History:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewC"
+        app:layout_constraintTop_toBottomOf="@+id/textViewC" />
+
+    <TextView
+        android:id="@+id/ResultHistory"
+        android:layout_width="375dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="28dp"
+        android:background="#52787C7C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ConversionHistory" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="371dp"
+        android:layout_height="51dp"
+        android:onClick="yolo"
+        android:text="CLEAR"
+        app:layout_constraintEnd_toEndOf="@+id/ResultHistory"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/ResultHistory"
+        app:layout_constraintTop_toBottomOf="@+id/ResultHistory" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
