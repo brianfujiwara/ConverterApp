@@ -1,4 +1,4 @@
-/*Brian Obmalay CSC472*/
+
 
 
 package com.example.temperatureapp;
